@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Sign Up</title>
+      <link rel="stylesheet" href="./style.css">
+      <h1 >Sign Up</h1>
+</head>
+<body>
+      <form action="./signup.html" method="POST" >
+            <h3 class="with-dot">Your basic info</h3>
+            <label for="firstname">First Name:</label>
+            <input type="text" id="firstname" name="firstname" required>
+            <label for="lastname">Last Name:</label>
+            <input type="text" id="lastname" name="lastName" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,}$">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <label for="confirm-password">Confirm Password:</label>
+            <input type="password" id="confirm-password" name="confirmPassword" required
+             minlength="9" pattern="^(?=.*[A-Z]).{9,}$" title="Password must be at least 9 characters and include at least one uppercase letter.">
+      <h3 class="with-dot">Other details</h3>
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+            <label for="gender" id="gender" name="gender">Gender:</label>
+            <div class="gender-options">
+            <div class="option">
+            <label for="">Male</label>
+            <input type="radio" id="male" name="gender" value="male"/>
+            </div>
+            <div class="option">
+            <label for="">Female</label>
+            <input type="radio" id="femali" name="gender" value="female"/>
+            </div>
+            </div>
+            <label for="">About me:</label>
+            <textarea id="aboutme" name="aboutme" rows="4" cols="50" placeholder="Tell us about yourself..." required></textarea>
+            <label for="profession">Choose your profession:</label>
+            <select id="profession" name="profession" required>
+                  <option value="" disabled selected>Select your profession</option>
+                  <option value="webdeveloper">Web developer</option>
+                  <option value="dataanalysis">Data analysis</option>
+                  <option value="uidesign">UI design</option>
+            </select>
+            <div>
+            <input type="checkbox" id="terms" name="terms" required>
+            I'm accepting<a href="./terms.html"> Terms and conditions.</a>
+            </div>
+            <button type="submit">Sign Up</button>
+      </form>
+</body>
+<!-- <script>
+  function validatePasswords() {
+    const password = document.getElementById("password").value;
+    const confirmPassword = document.getElementById("confirm-password").value;
+    const error = document.getElementById("error");
+
+    if (password !== confirmPassword) {
+      error.textContent = "Passwords do not match!";
+      return false;
+    }
+
+    error.textContent = "";
+    return true;
+  }
+</script> -->
+</html>
